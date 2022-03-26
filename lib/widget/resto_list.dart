@@ -11,13 +11,13 @@ class ListResto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // onTap: () {
-      //   Navigator.pushNamed(
-      //     context,
-      //     DetailResto.routeName,
-      //     arguments: resto,
-      //   );
-      // },
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          DetailResto.routeName,
+          arguments: resto,
+        );
+      },
       child: Column(children: <Widget>[
         Row(
           children: <Widget>[

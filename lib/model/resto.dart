@@ -111,7 +111,9 @@ class RestaurantFull {
   double rating;
   List<CustomerReview> customerReviews;
 
-  factory RestaurantFull.fromJson(Map<String, dynamic> json) => RestaurantFull(
+  factory RestaurantFull.fromJson(Map<String, dynamic> json) {
+    print(json);
+      return RestaurantFull(
         id: json["id"],
         name: json["name"],
         description: json["description"],
@@ -124,7 +126,8 @@ class RestaurantFull {
         rating: json["rating"].toDouble(),
         customerReviews: List<CustomerReview>.from(
             json["customerReviews"].map((x) => CustomerReview.fromJson(x))),
-      );
+       );
+      }
 
   Map<String, dynamic> toJson() => {
         "id": id,
